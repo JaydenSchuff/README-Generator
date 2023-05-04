@@ -21,7 +21,7 @@ inquirer
     },
     {
         type: 'input',
-        message: 'What are some examples?',
+        message: 'What are some examples? (optional)',
         name: 'usage',
     },
     {
@@ -45,26 +45,26 @@ inquirer
       })=>{
         const template = `# ${titleName}
         
-        #Description
+## Description
         
-        ${description}
+    ${description}
         
-        ## Installation
+## Installation
         
-        ${installation}
+    ${installation}
         
 
-        ## Usage
+## Usage
 
-        ${usage}
+    ${usage}
 
-        ### credits
+### credits
 
-        ${credits}
+    ${credits}
 
-        ### License
+### License
 
-        ${license}`;
+    ${license}`;
 
         writetoFile(titleName, template);
       }
